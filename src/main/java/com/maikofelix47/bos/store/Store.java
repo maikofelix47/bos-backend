@@ -1,9 +1,9 @@
 package com.maikofelix47.bos.store;
 
-import jakarta.persistence.Entity;
-import jakarta.persistence.GeneratedValue;
-import jakarta.persistence.GenerationType;
-import jakarta.persistence.Id;
+import com.maikofelix47.bos.product.Product;
+import jakarta.persistence.*;
+
+import java.util.Set;
 
 @Entity
 public class Store {
@@ -11,6 +11,9 @@ public class Store {
     @GeneratedValue(strategy = GenerationType.AUTO)
     private Integer id;
     private String name;
+
+    @OneToMany
+    Set<Product> products;
 
     public Store(){
 

@@ -1,9 +1,9 @@
 package com.maikofelix47.bos.quantitytype;
 
-import jakarta.persistence.Entity;
-import jakarta.persistence.GeneratedValue;
-import jakarta.persistence.GenerationType;
-import jakarta.persistence.Id;
+import com.maikofelix47.bos.product.Product;
+import jakarta.persistence.*;
+
+import java.util.Set;
 
 @Entity
 public class QuantityType {
@@ -12,6 +12,9 @@ public class QuantityType {
     private Integer id;
     private String name;
     private String units;
+
+    @OneToMany
+    Set<Product> products;
 
     public QuantityType(){
 
