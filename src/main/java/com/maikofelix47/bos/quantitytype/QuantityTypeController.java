@@ -6,26 +6,27 @@ import org.springframework.web.bind.annotation.*;
 import java.util.Optional;
 
 @RestController
+@RequestMapping("/api/quantityType")
 public class QuantityTypeController {
     @Autowired
     private QuantityTypeService quantityTypeService;
 
-    @GetMapping("/quantityType")
+    @GetMapping("")
     public Iterable<QuantityType> findAll(){
         return quantityTypeService.findAll();
     }
 
-    @GetMapping("/quantityType/{id}")
+    @GetMapping("/{id}")
     public Optional<QuantityType> findOne(@PathVariable Integer id){
         return quantityTypeService.findOne(id);
     }
 
-    @PostMapping("/quantityType")
+    @PostMapping("")
     public QuantityType insertOne(@RequestBody QuantityType quantityType){
         return quantityTypeService.insertOne(quantityType);
     }
 
-    @PutMapping("/quantityType/{id}")
+    @PutMapping("/{id}")
     public Optional<QuantityType> updateOne(@PathVariable Integer id, @RequestBody QuantityType quantityType){
         return  quantityTypeService.updateOne(id,quantityType);
     }

@@ -21,7 +21,7 @@ public class ProductController {
         return productService.findOne(id);
     }
 
-    @PostMapping("/product")
+    @PostMapping("")
     public Product insertOne(@RequestBody Product product){
         return  productService.insertOne(product);
     }
