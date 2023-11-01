@@ -1,5 +1,6 @@
 package com.maikofelix47.bos.product;
 
+import com.maikofelix47.bos.orderItem.OrderItem;
 import com.maikofelix47.bos.quantitytype.QuantityType;
 import com.maikofelix47.bos.store.Store;
 import jakarta.persistence.*;
@@ -20,6 +21,7 @@ public class Product {
 
     @ManyToOne
     private Store store;
+
 
     public Product(){
 

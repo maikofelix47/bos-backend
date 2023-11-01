@@ -17,6 +17,7 @@ public class Rider {
 
     private String phoneNo;
 
+
     public  Rider(){
 
     }
